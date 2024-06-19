@@ -1,4 +1,4 @@
-public class iPhone implements ReprodutorMusical, AparelhoTelefonico, NavegadorInternet {
+public class Iphone implements ReprodutorMusical, AparelhoTelefonico, NavegadorInternet {
     
     // Implementação dos métodos de ReprodutorMusical
     public void tocar() {
