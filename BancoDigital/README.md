@@ -1,18 +1,38 @@
-## Getting Started
+# Banco Digital
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto utiliza Lombok para reduzir a verbosidade do código Java. Lombok é uma biblioteca que automatiza a geração de métodos padrão como getters, setters, construtores, entre outros.
 
-## Folder Structure
+## Funcionalidades do Lombok Utilizadas
 
-The workspace contains two folders by default, where:
+- **Getters e Setters**: Anotação `@Getter` e `@Setter` para gerar automaticamente métodos getters e setters para os campos da classe.
+  
+- **Construtores**: Anotação `@NoArgsConstructor`, `@AllArgsConstructor` e `@RequiredArgsConstructor` para gerar construtores padrão, com todos os argumentos e apenas para campos marcados como `final`.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **ToString**: Anotação `@ToString` para gerar automaticamente o método `toString()` para exibir informações detalhadas do objeto.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- **EqualsAndHashCode**: Anotação `@EqualsAndHashCode` para gerar métodos `equals()` e `hashCode()` baseados nos campos da classe.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- **Data**: Anotação `@Data` combina as funcionalidades de `@Getter`, `@Setter`, `@ToString`, `@EqualsAndHashCode` e `@RequiredArgsConstructor` em uma única anotação conveniente.
 
-## Dependency Management
+## Exemplo de Uso
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```java
+import lombok.Data;
+
+@Data
+public class Cliente {
+    private String nome;
+    private String cpf;
+    private int idade;
+}
+´´´
+Neste exemplo, a anotação `@Data` substitui a necessidade de escrever manualmente métodos getters, setters, `toString()`, `equals()` e `hashCode()` para a classe `Cliente`.
+
+## Configuração do Projeto
+Certifique-se de que a extensão Lombok está instalada no seu IDE (como VS Code) e configurada corretamente para reconhecer anotações Lombok. Isso normalmente envolve adicionar um plugin Lombok ao seu ambiente de desenvolvimento.
+
+## Documentação Adicional
+Para mais detalhes sobre o uso do Lombok, consulte a documentação oficial do Lombok.
+
+## Desenvolvido por
+Cauã Assunção
