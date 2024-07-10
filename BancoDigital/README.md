@@ -25,7 +25,7 @@ public class Cliente {
     private String cpf;
     private int idade;
 }
-´´´
+```
 Neste exemplo, a anotação `@Data` substitui a necessidade de escrever manualmente métodos getters, setters, `toString()`, `equals()` e `hashCode()` para a classe `Cliente`.
 
 ## Configuração do Projeto
